@@ -3,6 +3,8 @@ package com.example.mycryptoconverter.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.Cascade;
@@ -11,6 +13,8 @@ import org.hibernate.annotations.Cascade;
 @Table(name = "Portfolio")
 @Data
 @RequiredArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Portfolio {
 
     @Id

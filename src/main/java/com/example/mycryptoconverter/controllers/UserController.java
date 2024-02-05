@@ -36,12 +36,12 @@ public class UserController {
     private final BindingResultChecker bindingResultChecker;
 
     @GetMapping("/{id}")
-    public User getUser(@PathVariable Long id){
-        return userService.getUserById(id);
+    public ResponseEntity<User> getUser(@PathVariable Long id){
+        return new ResponseEntity<>(userService.getUserById(id), HttpStatus.OK);
     }
 
     @GetMapping("/hello")
-    public void getUser(){
+    public void getHello(){
         System.out.println("hello");
     }
 

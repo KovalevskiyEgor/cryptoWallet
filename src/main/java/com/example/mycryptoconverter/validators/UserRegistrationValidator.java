@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @Component
@@ -36,12 +40,13 @@ public class UserRegistrationValidator implements Validator {
 
         try {
             user = userService.findByUsername(userDto.getUsername());
+            List<?> list = new LinkedList<>();
         }
         catch (UserNotFoundExeption exeption){
             return;
         }
         if(user!=null) errors.rejectValue("user","401","пользовательн с таким именем уже существует");
 
-
+//jdbc:postgresql://localhost:15432/myCryptoDb
     }
 }

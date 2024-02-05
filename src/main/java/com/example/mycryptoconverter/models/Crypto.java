@@ -1,10 +1,7 @@
 package com.example.mycryptoconverter.models;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.springframework.data.redis.core.RedisHash;
 
 import java.util.ArrayList;
@@ -16,6 +13,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "crypto")
+@AllArgsConstructor
+@Builder
 public class Crypto {
 
     @Id

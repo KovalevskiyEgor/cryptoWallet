@@ -5,6 +5,8 @@ import io.jsonwebtoken.security.Keys;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,6 +19,8 @@ import java.util.List;
 @Table(name = "Users")
 @Data
 @RequiredArgsConstructor
+@Builder
+@AllArgsConstructor
 public class User{
 
     @Id

@@ -8,6 +8,8 @@ import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -15,6 +17,8 @@ import java.util.List;
 
 @Data
 @RequiredArgsConstructor
+@Builder
+@AllArgsConstructor
 public class UserDto {
 
     private int id;
